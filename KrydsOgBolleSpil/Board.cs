@@ -6,7 +6,6 @@ namespace KrydsOgBolleSpil
 {
     class Board
     {
-
         public char[,] boardBox = new char[3, 3];
         public char placeHolder = '?';
 
