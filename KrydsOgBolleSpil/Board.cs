@@ -7,7 +7,8 @@ namespace KrydsOgBolleSpil
     class Board
     {
 
-        string[,] boardBox = new string[3, 3];
+        public char[,] boardBox = new char[3, 3];
+        public char placeHolder = '?';
 
         public Board()
         {
@@ -20,18 +21,19 @@ namespace KrydsOgBolleSpil
             {
                 for (int c = 0; c < 3; c++)
                 {
-                    boardBox[i,c] = " ? ";
+                    boardBox[i,c] = placeHolder;
                 }
             }
         }
 
         public void DrawBoard()
         {
-            for(int i = 0; i < 3; i++)
+            Console.WriteLine("\n");
+            for (int i = 0; i < 3; i++)
             {
                 for(int c = 0; c < 3; c++)
                 {
-                    Console.Write(boardBox[i, c]);
+                    Console.Write("    "+boardBox[i, c]+" ");
                 }
                 Console.WriteLine("\n");
             }
@@ -39,7 +41,7 @@ namespace KrydsOgBolleSpil
 
         public void InsertPiece(int x, int y, char symbol)
         {
-            boardBox[x, y] = " " + symbol.ToString() + " ";
+            boardBox[x, y] = symbol;
         }
     }
 
