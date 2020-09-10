@@ -20,7 +20,7 @@ namespace KrydsOgBolleSpil
             {
                 for (int c = 0; c < 3; c++)
                 {
-                    boardBox[i,c] = " # ";
+                    boardBox[i,c] = " ? ";
                 }
             }
         }
@@ -39,7 +39,7 @@ namespace KrydsOgBolleSpil
 
         public void InsertPiece(int x, int y, char symbol)
         {
-            boardBox[x, y] = symbol.ToString();
+            boardBox[x, y] = " " + symbol.ToString() + " ";
         }
     }
 
