@@ -26,10 +26,10 @@ namespace KrydsOgBolleSpil
                 {
                     this.playerZ.playerTurnn = 0;
                     PlacePiece();
-                    board.DrawBoard();
+                    this.board.DrawBoard();
                     this.playerZ.playerTurnn = 1;
                     PlacePiece();
-                    board.DrawBoard();
+                    this.board.DrawBoard();
                     turnCounter++;
                 }
             }
@@ -47,6 +47,7 @@ namespace KrydsOgBolleSpil
             DuplicatePieceRule();
             Console.WriteLine("\n");
             this.board.InsertPiece(x,y,this.playerZ.symbols);
+            Console.Clear();
             WinConditions();
         }
 
@@ -64,11 +65,14 @@ namespace KrydsOgBolleSpil
             }  
         }
 
+        #region Win Conditions Vertical, Horizontal and Diagonal
         public void WinConditions()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             VerticalWin();
             HorizontalWin();
             DiagonalWin();
+            Console.ResetColor();
         }
 
         public void VerticalWin()
@@ -90,6 +94,8 @@ namespace KrydsOgBolleSpil
                     {
                         Console.WriteLine("Player 2, that was Fantastic.\nA vertical win!\nYou're the Tic Tac Toe Master!\n");
                     }
+                    turnCounter = 0;
+                    this.board.BoardReset();
                     break;
                 }
             }
@@ -114,6 +120,8 @@ namespace KrydsOgBolleSpil
                     {
                         Console.WriteLine("Player 2 , that was Fantastic.\nA horizontal win!\nYou're the Tic Tac Toe Master!\n");
                     }
+                    turnCounter = 0;
+                    this.board.BoardReset();
                     break;
                 }
             }
@@ -137,9 +145,12 @@ namespace KrydsOgBolleSpil
                     {
                         Console.WriteLine("Player 2 , that was Fantastic.\nA Diagonal win!\nYou're the Tic Tac Toe Master!\n");
                     }
+                    turnCounter = 0;
+                    this.board.BoardReset();
                     break;
                 }
             }
         }
+        #endregion
     }
 }

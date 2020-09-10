@@ -38,6 +38,11 @@ namespace KrydsOgBolleSpil
             }
         }
 
+        public void BoardReset()
+        {
+            InstantiateBoard();
+        }
+
         public void InsertPiece(int x, int y, char symbol)
         {
             boardBox[x, y] = symbol;
