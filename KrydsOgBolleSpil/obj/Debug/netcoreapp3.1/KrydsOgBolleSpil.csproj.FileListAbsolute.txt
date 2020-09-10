@@ -1,0 +1,13 @@
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.exe
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.deps.json
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.runtimeconfig.json
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.runtimeconfig.dev.json
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.dll
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\bin\Debug\netcoreapp3.1\KrydsOgBolleSpil.pdb
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.csprojAssemblyReference.cache
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.csproj.CoreCompileInputs.cache
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.AssemblyInfoInputs.cache
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.AssemblyInfo.cs
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.dll
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.pdb
+C:\Users\MinhY\source\repos\KrydsOgBolleSpil\KrydsOgBolleSpil\obj\Debug\netcoreapp3.1\KrydsOgBolleSpil.genruntimeconfig.cache
