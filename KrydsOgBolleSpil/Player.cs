@@ -9,6 +9,7 @@ namespace KrydsOgBolleSpil
         public char symbols;
         public int playerTurnn = 0;
 
+        // PlayerTurn metoden skifter spillerens tur afhængig af om playerTurnn er 0 eller 1
         public void PlayerTurn()
         {
             if (playerTurnn == 0)

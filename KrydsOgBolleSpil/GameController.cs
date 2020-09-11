@@ -7,6 +7,7 @@ namespace KrydsOgBolleSpil
 {
     class GameController
     {
+        // instantiere Board og Player class
         Board board = new Board();
         Player playerZ = new Player();
         private int turnCounter = 0;
@@ -14,6 +15,8 @@ namespace KrydsOgBolleSpil
         private int x;
         private int y;
 
+        // StartGame() kører som det første når programmet startes så spilles en runde som looper så længe loop er true
+        // Hvis turnCounter når at tælle til 10 vil spillet fortælle at det blev uafgjort og stoppe loopet 
         public void StartGame()
         {
             board.DrawBoard();
@@ -24,6 +27,7 @@ namespace KrydsOgBolleSpil
                 }
                 else
                 {
+                    // Her køres en runde af spillet som loopes
                     this.playerZ.playerTurnn = 0;
                     PlacePiece();
                     this.board.DrawBoard();
@@ -35,6 +39,7 @@ namespace KrydsOgBolleSpil
             }
         }
 
+        // Når spilleren har indtastet hvor brikken skal lægges vil den sætte informationerne i InsertPiece() metoden i Board klassen
         public void PlacePiece()
         {
             playerZ.PlayerTurn();
@@ -51,6 +56,8 @@ namespace KrydsOgBolleSpil
             WinConditions();
         }
 
+        // Checker om der hvor spilleren vil placer sin brik allerede har en brik liggende
+        // Hvis der ligger en brik allerede skal spilleren indtaste nye kordinater
         public void DuplicatePieceRule()
         {
             while (this.board.boardBox[x,y] != this.board.placeHolder)
@@ -65,7 +72,10 @@ namespace KrydsOgBolleSpil
             }  
         }
 
+
         #region Win Conditions Vertical, Horizontal and Diagonal
+
+        // Her er alle vinder reglernes metoder samlet i et sted
         public void WinConditions()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -75,6 +85,8 @@ namespace KrydsOgBolleSpil
             Console.ResetColor();
         }
 
+
+        // Checker om spilleren har 3 på stribe vertical
         public void VerticalWin()
         {
             char[] symbolsXO = { 'X', 'O' };
@@ -88,11 +100,11 @@ namespace KrydsOgBolleSpil
                     Console.Clear();
                     if (symbolXO == 'X')
                     {
-                        Console.WriteLine("Player 1, that was Fantastic.\nA vertical win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 1, WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful vertical win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     else
                     {
-                        Console.WriteLine("Player 2, that was Fantastic.\nA vertical win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 2, WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful vertical win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     turnCounter = 0;
                     this.board.BoardReset();
@@ -101,6 +113,7 @@ namespace KrydsOgBolleSpil
             }
         }
 
+        // Checker om spilleren har 3 på stribe horizontal
         public void HorizontalWin()
         {
             char[] symbolsXO = { 'X', 'O' };
@@ -114,11 +127,11 @@ namespace KrydsOgBolleSpil
                     Console.Clear();
                     if (symbolXO == 'X')
                     {
-                        Console.WriteLine("Player 1 , that was Fantastic.\nA horizontal win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 1 , WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful horizontal win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     else
                     {
-                        Console.WriteLine("Player 2 , that was Fantastic.\nA horizontal win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 2 , WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful horizontal win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     turnCounter = 0;
                     this.board.BoardReset();
@@ -127,6 +140,7 @@ namespace KrydsOgBolleSpil
             }
         }
 
+        // Checker om spilleren har 3 på stribe diagonal
         public void DiagonalWin()
         {
             char[] symbolsXO = { 'X', 'O' };
@@ -139,11 +153,11 @@ namespace KrydsOgBolleSpil
                     Console.Clear();
                     if (symbolXO == 'X')
                     {
-                        Console.WriteLine("Player 1 , that was Fantastic.\nA Diagonal win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 1 , WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful diagonal win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     else
                     {
-                        Console.WriteLine("Player 2 , that was Fantastic.\nA Diagonal win!\nYou're the Tic Tac Toe Master!\n");
+                        Console.WriteLine("Player 2 , WINNER WINNER CHICKEN DINNER!.\nWhat a beautiful diagonal win!\n\nI played my Asian friend in Tic Tac Toe\nIt was a Thai.\n\nNext game is already waiting for ya!\n");
                     }
                     turnCounter = 0;
                     this.board.BoardReset();
